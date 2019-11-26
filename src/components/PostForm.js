@@ -10,8 +10,10 @@ export default class PostForm extends Component {
     }
     this.onChange = this.onChange.bind(this)
   }
-  onChange() {
-
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
   render() {
     return (
